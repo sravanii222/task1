@@ -1,0 +1,91 @@
+
+    1.    temp = prompt("Enter temp in degree celsius:");
+        if (!(isNaN(temp))) {
+            if (temp > 40) {
+                console.log("Extreme Hot");
+            }
+            else if (temp >= 20 && temp <= 40) {
+                console.log("Moderate");
+            }
+            else {
+                console.log("Cold")
+            }
+        }
+        else {
+            console.log("Enter digits only")
+        }
+
+ 
+
+
+
+2. let totalAmount = +prompt("Enter total amount:");
+if (!(isNaN(totalAmount))) {
+    if (totalAmount >= 500) {
+        totalAmount -= 0.2 * totalAmount
+    }
+    else if (totalAmount > 200 && totalAmount < 500) {
+        totalAmount -= 0.1 * totalAmount;
+    }
+    else {
+        totalAmount = totalAmount;
+
+    }
+    console.log("TotalAmount after discount:",totalAmount);
+}
+else {
+    console.log("Enter value >0");
+}
+3.  let marks = +prompt("Enter Marks:");
+switch (true) {
+    case marks >= 90:
+        grade = "A+";
+        break;
+    case marks >= 80:
+        grade = "A";
+        break;
+    case marks >= 70:
+        grade = "B";
+        break;
+    case marks < 70:
+        grade = "C";
+        break;
+    default:
+        grade = "Enter correct value"
+}
+console.log(grade);
+4.let latedays = +prompt("latedays=");
+switch (true) {
+    case latedays >= 1 && latedays <= 5:
+        fine = latedays * 2;
+        break;
+    case latedays >= 6 && latedays <= 10:
+        fine = latedays * 3;
+        break;
+    case latedays > 10:
+        fine = latedays * 5;
+        break;
+    default:
+        fine = "Enter correct value"
+}
+console.log(`Fine:$${fine}`)
+5. let favoriteFood = prompt("Enter Favourite food(Pizza,Pasta,Burger):").toLowerCase();
+if (favoriteFood == "pizza") {
+    console.log("Pizza lover!");
+}
+else if (favoriteFood == "pasta") {
+    console.log("Pasta lover!");
+} else if (favoriteFood == "burger") {
+    console.log("Burger lover!");
+} else {
+    console.log("Invalid choice");
+}
+6. let age=+prompt("Enter age:");
+let income =+prompt("Enter income:");
+let hasCriminalRecord =prompt("Enter criminalrecord(true,false):");
+if (age >= 21 && age <= 60 && income > 20000 && hasCriminalRecord=="true") {
+    console.log("Eligible for Loan");
+} 
+else {
+    console.log("Not Eligible");
+}
